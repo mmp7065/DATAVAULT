@@ -340,7 +340,7 @@ function deleteCurrentPlanning(){
  const target=current();
  if(!target)return;
  const label=String(target.name||'este planejamento');
- if(!confirm('Excluir definitivamente o planejamento "'+label+'"?\\n\\nTodas as entidades, fichas, conexões e dados deste planejamento serão removidos. Esta ação não pode ser desfeita.'))return;
+ if(!confirm('Excluir definitivamente o planejamento "'+label+'"?\n\nTodas as entidades, fichas, conexões e dados deste planejamento serão removidos. Esta ação não pode ser desfeita.'))return;
  const index=models.findIndex(m=>m.id===target.id);
  if(index<0)return;
  models.splice(index,1);
